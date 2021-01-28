@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/iv_layer_list"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/layer_list"
+        app:layout_constraintBottom_toTopOf="@id/tv_byte_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_byte_array"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/background"
+        app:layout_constraintBottom_toTopOf="@id/iv_glide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_layer_list" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_glide"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/image_from_internet"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_download_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_byte_array" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_download_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_for_btn"
+        android:text="@string/download_img"
+        app:layout_constraintBottom_toTopOf="@id/iv_paint_img"
+        app:layout_constraintEnd_toStartOf="@id/btn_img_to_byte_array"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_glide"
+        android:layout_marginHorizontal="4dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_img_to_byte_array"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_for_btn"
+        android:text="Decode image"
+        app:layout_constraintBottom_toTopOf="@id/iv_paint_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_download_image"
+        app:layout_constraintTop_toBottomOf="@id/iv_glide"
+        android:layout_marginHorizontal="4dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_paint_img"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_download_image" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
